@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пригласительные на свадьбу</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9fb; /* Бежевый фон */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+.dancing-script-custom-font {
+            font-family: "Dancing Script", cursive;
+            font-weight: 400;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+margin-bottom: 0;
+            color: #2f2e33; /* Цвет заголовка */
+        }
+        h2 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #2f2e33; /* Цвет подзаголовка */
+  margin: 0;
+  padding: 0;
+
+        }  
+
+        .date {
+            font-size: 1.5em;
+            color: #555;
+            margin: 10px 0;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .waiting {
+            font-family: 'Georgia', serif; /* Красивый шрифт */
+            font-size: 2em;
+            margin: 20px 0;
+            color: #2f2e33; /* Цвет текста */
+        }
+        .location {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        .address {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .map-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8B4513; /* Цвет кнопки */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .calendar {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        .heart {
+            color: red;
+            font-size: 24px; /* Размер сердечка */
+        }
+        .timing {
+            margin-top: 40px;
+            font-size: 1.5em;
+        }
+        .timing-list {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 0; /* Убираем отступы */
+        }
+        .countdown {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+        .footer-image {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The Wedding Day</h1>
+    <h2>_________________</h2>
+    <h2 class="dancing-script-custom-font">Роман и Алина</h2>
+    <img src="C:\Users\elvin\Desktop\алинке\IMG_3085.JPG" alt="Пригласительное на свадьбу">
+    <div class="date">25.07.2025 16:00</div>
+    
+    <div class="waiting">Мы ждем вас</div>
+    
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>Пн</th>
+                <th>Вт</th>
+                <th>Ср</th>
+                <th>Чт</th>
+                <th>Пт</th>
+                <th>Сб</th>
+                <th>Вс</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td>
+            </tr>
+            <tr>
+                <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+            </tr>
+            <tr>
+                <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
+            </tr>
+            <tr>
+                <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
+            </tr>
+            <tr>
+                <td>25<span class="heart">❤️</span></td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="location">Локация:</div>
+    <div class="address">Наша свадьба пройдет в [Укажите место]</div>
+    <img src="your-location-photo-url.jpg" alt="Локация свадьбы">
+    <div class="address">Адрес: [Укажите адрес]</div>
+    <a href="https://www.google.com/maps" class="map-button" target="_blank">Как добраться</a>
+
+    <div class="timing">Тайминг дня:</div>
+    <ul class="timing-list">
+        <li>16:20 Сбор гостей</li>
+        <li>16:30 Церемония регистрации</li>
+        <li>18:00 Welcome</li>
+        <li>Завершение вечера — гуляем до последнего гостя!</li>
+    </ul>
+
+    <div class="countdown" id="countdown"></div>
+
+    <img src="your-footer-image-url.jpg" alt="Будем рады вас видеть" class="footer-image">
+    <div class="footer-message">Будем рады вас видеть! До скорой встречи!</div>
+
+    <script>
+        // Устанавливаем дату свадьбы
+        const weddingDate = new Date("2025-07-25T16:00:00").getTime();
+
+        // Обновляем обратный отсчет каждую секунду
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            // Вычисляем дни, часы, минуты и секунды
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Выводим результат в элемент с id "countdown"
+            document.getElementById("countdown").innerHTML = ${days}d ${hours}h ${minutes}m ${seconds}s;
+
+            // Если обратный отсчет закончился, выводим сообщение
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "Свадьба уже прошла!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
+
